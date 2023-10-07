@@ -1,0 +1,60 @@
+# fibonacci series program
+a=int(input("Enter the Fibonacci number range : "))
+first=0
+second=1
+for i in range(a):
+    print(first,end=" ")
+    temp=first
+    first=second
+    second=temp+second
+
+# to find a leap year
+year=int(input("Enter the Year:"))
+if year%4==0:
+    if year%100==0:
+        if year%400==0:
+            print("It is a Leap year")
+        else:
+            print("It is not a Leap year")
+    else:
+        print("It is Leap year")
+else:
+    print("It is not a leap Year")
+
+
+# Password generator
+import random
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+           'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+           'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+symbols = ['!', '@', '#', '$', '%', '*', '?', '+']
+
+a = int(input("How many letters you want ?\n"))
+b = int(input("How many numbers you want ?\n"))
+c = int(input("How many symbols you want ?\n"))
+
+password = ""
+
+for i in range(a):
+    char = random.choice(letters)
+    password = char + password
+
+for i in range(b):
+    char = random.choice(numbers)
+    password = char + password
+
+for i in range(c):
+    char = random.choice(symbols)
+    password = char + password
+
+password = list(password)
+
+random.shuffle(password)
+
+final = "".join(password)
+
+print(final)
