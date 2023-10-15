@@ -10,9 +10,6 @@ for x in s :
     i=i+1
 
 
-# for i in range(10):
-#     print("Hi")
-
 #To print tables
 n=int(input("Enter Number :"))
 for i in range (1,21):
@@ -60,10 +57,10 @@ for i in range(1,11):
 #for item,lollypop in list1:
 #    print(item,' have',lollypop)
 
-#items=['int','float','banana',2,4,5,6,44,55,66,77,88]
-#for item in items:
-#    if str(item).isnumeric() and item>6:
-#        print(item)
+items=['int','float','banana',2,4,5,6,44,55,66,77,88]
+for item in items:
+   if str(item).isnumeric() and item>6:
+       print(item)
 
 ##while loop
 #i=0
